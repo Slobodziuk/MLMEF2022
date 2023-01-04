@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pressure prediction Copenhagen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  </head>
+
+  <body>
+    <div class="grid">
+
+      <div class="box">
+
+        <p>According to the windspeed, lowest temperature, highest temperature, average temperature and the direction of the wind. What is the predicted pressure?</p>
+        <form action = "{{ url_for('predict')}}" method = "post">
+          <input type="number" name="Windspeed" placeholder="Windspeed" required="required" min="0" max="100"/>
+          <input type="number" name="Lowest temperature" placeholder="temperature min" required="required" min="-35" />
+          <input type="number" name="Highest temperature" placeholder="temperature max" required="required" max="40"/>
+          <input type="number" name="Average temperature" placeholder="Average  temperature" required="required" />
+          <input type="number" name="Direction of wind" placeholder="Wind Direction" required="required" min="0" max="359"  />
+          <button type="submit" class="btn">Predict pressure in Copenhagen with your given measurements</button>
+        </form>
+
+        <p>{{Pressure_prediction}}</p>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>
