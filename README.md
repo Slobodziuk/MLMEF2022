@@ -1,7 +1,7 @@
 # MLMEF2022
 MLMEF2022 project
 ## How to run the application
-There’re two possibilities to run the model. Either locally from the ipynb file or from the Flask app.
+There’re two possibilities to run the model. Either locally from the ipynb file or from the Flask app. The projects needs to be downloaded before any of the steps below can be made.
 1.	Run the model from the ipynb file.
   - Open the ipynb file and ensure that it is in an environment that supports the libraries, at minimum use python 3.10.6.
   - Activate the virtual environment with “conda activate [your environment here]”
